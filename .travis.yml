@@ -7,3 +7,9 @@ cache:
 script:
   - npm test
   - CI=false npm run build
+notifications:
+  email:
+    recipients:
+      - xinyuzhang2021@u.northwestern.edu
+    on_success: always # default: change
+    on_failure: always # default: always
