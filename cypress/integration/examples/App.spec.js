@@ -8,4 +8,10 @@ describe ('Test App', () => {
         cy.visit ('/');
         cy.get('[data-cy=header]').should('contain', 'ChoreWeek');
     });
+
+    it('click addChore button', () => {
+        cy.visit ('/');
+        cy.get('[data-cy=addChore]').click();
+        cy.get('[data-cy=cancel]').should('contain' ,'Cancel');
+    });
 });

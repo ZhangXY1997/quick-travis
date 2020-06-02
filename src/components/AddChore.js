@@ -88,7 +88,7 @@ const AddChore = ({uid, username}) => {
 
     return (
         <div>
-            <Button color="primary" onClick={handleClickOpen}>Add Chore</Button>
+            <Button data-cy="addChore" color="primary" onClick={handleClickOpen}>Add Chore</Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Add a chore</DialogTitle>
                 <DialogContent className="dialog-root">
@@ -174,19 +174,19 @@ const AddChore = ({uid, username}) => {
 
                                 }
                             </TextField>
-                            {recursion !== 'none' && group.gid !== 'personal' ? 
+                            {recursion !== 'none' && group.gid !== 'personal' ?
                             <FormGroup>
-                                <FormControlLabel 
+                                <FormControlLabel
                                 control={<Checkbox checked={rotate} onChange={() => setRotate(!rotate)} />}
                                 label="Rotate between group members?" />
                             </FormGroup>
                             : <div/>
-                            }                
+                            }
                         </div>
                     </div>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
+                    <Button data-cy="cancel" onClick={handleClose} color="primary">
                         Cancel
                     </Button>
                     <Button onClick={handleSave} color="primary">
