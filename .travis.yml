@@ -13,7 +13,7 @@ cache:
     - ~/.cache
 script:
   - npm run test:ci
-  - npm run build
+  - CI=false npm run build
 notifications:
   email:
     recipients:
