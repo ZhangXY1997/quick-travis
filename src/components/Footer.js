@@ -48,7 +48,7 @@ export default function SimpleBottomNavigation() {
         >
                 {/* <Link to="/groups"> */}
                     <BottomNavigationAction label="Groups"
-                                            icon={<GroupIcon/>} component={LinkBehavior}/>
+                                            icon={<GroupIcon/>} component={LinkBehavior} data-cy="group"/>
                 {/* </Link> */}
 
                 {/* <Link to="/chores"> */}

@@ -11,7 +11,13 @@ describe ('Test App', () => {
 
     it('click addChore button', () => {
         cy.visit ('/');
+        cy.get('[data-cy=group]').click();
+        cy.get('[data-cy=loading]').should('contain' ,'Loading');
+    });
+
+    /*it('click addChore button', () => {
+        cy.visit ('/');
         cy.get('[data-cy=addChore]').click();
         cy.get('[data-cy=cancel]').should('contain' ,'Cancel');
-    });
+    });*/
 });
